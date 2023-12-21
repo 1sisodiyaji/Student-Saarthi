@@ -1,0 +1,1 @@
+# THese is a study saarthi project made to fulll fill a astudent and instructor claases , basicaaly it si a edTech projects.
