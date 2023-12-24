@@ -1,4 +1,5 @@
-const mailSender = require("nodemailer")
+const nodemailer = require("nodemailer");
+
 const mailSender = async (email,title,body) =>{
     try{
         let transporter = modemailer.createTransport({
@@ -10,7 +11,7 @@ const mailSender = async (email,title,body) =>{
             secure :false,
         })
         let info = await transporter.sendMail({
-            from:`"Study Saarthi"  <${process.env.MAIL_USER}>`,
+            from:`Study Saarthi`,
             to:`${email}`,
             subject:`${title}`,
             html:`${body}`,

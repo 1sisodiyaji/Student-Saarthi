@@ -41,7 +41,7 @@ app.use("/api/v1/auth",contactUsRoute)
 app.get("/" , (req,res) => {
     return res.json({
         success:true,
-        message:"Ypur Server is up and running ..."
+        message:"Your Server is up and running ..."
     });
 });
 

@@ -1,16 +1,15 @@
-const moongose = require("moongoose");
+const mongoose = require("mongoose");
 require("dotenv").config();
 
-const {MONGODB_URL} = process.env;
-exports.connect =() =>{
-    moongose.connect(MONGODB_URL,{
-        useNewUrlParser :true,
+exports.connect = () => {
+    mongoose.connect(process.env.MONGODB_URL, {
+        useNewUrlParser: true,
         useUnifiedTopology:true,
     })
-    .then(console.log(`DB Connection Successfully`))
-    .catch((err) => {
-        console.log(`DB Connection Failed`);
-        console.log(err);
+    .then(() => console.log("DB Connected Successfully"))
+    .catch( (error) => {
+        console.log("DB Connection Failed");
+        console.error(error);
         process.exit(1);
-    });
+    } )
 };
